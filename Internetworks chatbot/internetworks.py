@@ -7,7 +7,7 @@ load_dotenv()
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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" )
+    api_key="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" )
 
 
 knowledge_base = """ Company Profile - INTERNETWORKS . 
