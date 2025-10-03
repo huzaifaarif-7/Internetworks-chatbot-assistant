@@ -168,7 +168,7 @@
             left: 0;
             right: 0;
             transform: translateY(-50%);
-            padding: 0 24px;
+            padding: 12px;
         }
 
         /* Header */
@@ -480,6 +480,18 @@
 
         /* Responsive layout: mobile-friendly without changing desktop */
         @media (max-width: 768px) {
+
+            /* Ensure slim composer even in empty state */
+            #main.empty .input-wrapper {
+                max-width: 640px;
+                min-height: 44px;
+                padding: 8px 44px 8px 12px;
+            }
+
+            #main.empty #userInput {
+                height: 24px !important;
+                max-height: 96px;
+            }
 
             /* Show mobile menu button */
             .mobile-menu-btn {
