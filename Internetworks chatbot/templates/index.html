@@ -256,7 +256,11 @@
         .messageRow {
             display: flex;
             margin-bottom: 0;
-            padding: 16px;
+            padding: 16px 12px;
+            width: 100%;
+            max-width: 768px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .userRow {
@@ -356,6 +360,7 @@
             border: 1px solid #2a2a2a;
             border-radius: 12px;
             padding: 8px 52px 8px 14px;
+            overflow: hidden;
         }
 
         .input-wrapper:focus-within {
@@ -364,6 +369,7 @@
 
         #userInput {
             width: 100%;
+            display: block;
             padding: 0;
             border: none;
             border-radius: 8px;
@@ -375,6 +381,11 @@
             min-height: 24px;
             max-height: 200px;
             line-height: 1.5;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
 
         #userInput:focus {
@@ -515,7 +526,8 @@
 
             /* Messages more breathable and full width */
             .messageRow {
-                padding: 12px 14px;
+                padding: 12px 12px;
+                max-width: 100%;
             }
 
             .botRow .message,
@@ -646,7 +658,7 @@
 
         <div id="inputContainer">
             <div class="input-wrapper">
-                <input type="text" id="userInput" placeholder="Ask anything" />
+                <textarea id="userInput" placeholder="Ask anything" rows="1" wrap="soft"></textarea>
                 <button id="sendBtn">➤</button>
             </div>
         </div>
