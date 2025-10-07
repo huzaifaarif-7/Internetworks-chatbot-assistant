@@ -1,9 +1,14 @@
 {
-  "version": 2,
   "builds": [
-    { "src": "internetworks_chatbot/app.py", "use": "@vercel/python" }
+    {
+      "src": "internetworks_chatbot/app.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "internetworks_chatbot/app.py" }
+    {
+      "src": "/(.*)",
+      "dest": "internetworks_chatbot/app.py"
+    }
   ]
 }
