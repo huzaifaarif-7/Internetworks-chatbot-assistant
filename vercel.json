@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "internetworks_chatbot/app.py",
+      "src": "Internetworks_chatbot/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "internetworks_chatbot/app.py"
+      "dest": "Internetworks_chatbot/app.py"
     }
   ]
 }
