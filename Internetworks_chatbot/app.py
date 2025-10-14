@@ -3,7 +3,7 @@ import json
 import os
 from dotenv import load_dotenv
 
-from internetworks_chatbot.internetworks import chat_with_bot, stream_chat_with_bot
+from internetworks import chat_with_bot, stream_chat_with_bot
 
 # Load environment variables
 load_dotenv()
