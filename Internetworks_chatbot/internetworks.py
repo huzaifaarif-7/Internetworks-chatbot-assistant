@@ -104,7 +104,7 @@ def get_calendly_preview():
 
 def chat_with_bot(prompt):
     response = client.chat.completions.create(
-        model = "deepseek/deepseek-r1-0528:free",
+        model = "deepseek/deepseek-chat-v3.1:free",
         messages = [{"role": "system", "content": system_prompt},
             {"role" :"user", "content" : prompt}] )
 
@@ -119,7 +119,7 @@ def stream_chat_with_bot(prompt):
     """Streaming version of chat function using OpenRouter streaming API"""
     try:
         response = client.chat.completions.create(
-            model="deepseek/deepseek-r1-0528:free",
+            model="deepseek/deepseek-chat-v3.1:free",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
