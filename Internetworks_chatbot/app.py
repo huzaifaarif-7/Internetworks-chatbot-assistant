@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 from internetworks import chat_with_bot, stream_chat_with_bot
 
-# Load environment variables
+
 load_dotenv()
 
 app = Flask(__name__)
