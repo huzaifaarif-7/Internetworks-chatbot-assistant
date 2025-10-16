@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
+
 load_dotenv()
 
 client = OpenAI(
@@ -137,7 +137,7 @@ def stream_chat_with_bot(prompt):
                         collected_message += content
                         yield {"type": "content", "content": content}
 
-        # Check if the complete message indicates booking
+       
         if collected_message.strip() == "BOOK_MEETING":
             yield {"type": "special", "action": "BOOK_MEETING", "data": get_calendly_preview()}
 
