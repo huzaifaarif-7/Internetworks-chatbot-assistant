@@ -481,6 +481,18 @@
         /* Responsive layout: mobile-friendly without changing desktop */
         @media (max-width: 768px) {
 
+            /* In empty state on mobile, keep composer docked to bottom instead of centered */
+            #main.empty #inputContainer {
+                position: sticky;
+                top: auto;
+                bottom: 0;
+                transform: none;
+                padding: 12px;
+                background: #121212;
+                border-top: 1px solid #1e1e1e;
+                z-index: 5;
+            }
+
             /* Ensure slim composer even in empty state */
             #main.empty .input-wrapper {
                 max-width: 640px;
