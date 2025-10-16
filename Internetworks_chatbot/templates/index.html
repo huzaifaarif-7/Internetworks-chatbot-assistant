@@ -482,16 +482,20 @@
         @media (max-width: 768px) {
 
             /* In empty state on mobile, keep composer docked to bottom instead of centered */
-            #main.empty #inputContainer {
-                position: sticky;
-                top: auto;
+               #main.empty #inputContainer {
+                position: fixed;
+                left: 0;
+                right: 0;
                 bottom: 0;
+                top: auto;
                 transform: none;
                 padding: 12px;
+                padding-bottom: calc(12px + env(safe-area-inset-bottom));
                 background: #121212;
                 border-top: 1px solid #1e1e1e;
-                z-index: 5;
+                z-index: 20;
             }
+
 
             /* Ensure slim composer even in empty state */
             #main.empty .input-wrapper {
